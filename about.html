@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Archtype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"></div>
+                Archtype
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#waitlist" class="cta-button">Join Waitlist</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 8rem 2rem 2rem;">
+        <div class="hero-container">
+            <h1 class="fade-in">About <span class="highlight">Archetype</span></h1>
+            <p class="fade-in" style="max-width: 800px;">Revolutionizing the electrical product safety certification process.</p>
+        </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="features" style="background: var(--white); padding: 4rem 2rem;">
+        <div class="features-container" style="text-align: left; max-width: 800px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--dark-gray);">Simplifying Electrical Product Certification</h2>
+            
+            <p class="fade-in" style="margin-bottom: 2rem;">Archetype bridges the gap between manufacturers and certification bodies, revolutionizing the electrical product safety certification process. We prioritize efficiency—understanding that for manufacturers, time is more valuable than money.</p>
+            
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--dark-gray); margin-top: 2rem;">Our Mission</h3>
+            <p class="fade-in" style="margin-bottom: 2rem;">We streamline the certification journey by helping manufacturers identify the specific standards they should be asking certification bodies about, reducing confusion and saving valuable time.</p>
+            
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--dark-gray); margin-top: 2rem;">What We Do</h3>
+            <ul class="fade-in" style="margin-bottom: 2rem; padding-left: 1.5rem; color: var(--text-gray);">
+                <li style="margin-bottom: 1rem;"><strong>Standards Guidance:</strong> We help manufacturers pinpoint exactly which standards apply to their products, so they can ask the right questions and avoid costly delays.</li>
+                <li style="margin-bottom: 1rem;"><strong>Proactive Updates:</strong> We empower manufacturers to stay ahead by tracking changes to the standards their certifications are based on.</li>
+                <li style="margin-bottom: 1rem;"><strong>Certification Body Collaboration:</strong> Our guidance on working effectively with certification bodies ensures products receive certifications on time—crucial for maintaining production schedules.</li>
+                <li><strong>Certification Directory:</strong> Manufacturers can post their certifications on our website, creating a centralized platform where customers can find certified components for their own compliance needs.</li>
+            </ul>
+            
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--dark-gray); margin-top: 2rem;">Why It Matters</h3>
+            <p class="fade-in" style="margin-bottom: 1rem;">One of the most common reasons for missed production dates is the difficulty in locating appropriately certified components. By providing a searchable directory of certified products, we help manufacturers:</p>
+            <ul class="fade-in" style="padding-left: 1.5rem; color: var(--text-gray); margin-bottom: 2rem;">
+                <li style="margin-bottom: 0.5rem;">Reduce the risk of production delays</li>
+                <li style="margin-bottom: 0.5rem;">Accelerate time-to-market for their products</li>
+                <li style="margin-bottom: 0.5rem;">Support their customers in meeting compliance requirements efficiently</li>
+                <li>Create a more interconnected ecosystem that benefits all parties</li>
+            </ul>
+            
+            <p class="fade-in">Our goal is to minimize the financial losses associated with missed certification timelines while enhancing operational efficiency for every customer we serve.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>hello@archtype.coach</li>
+                    <li></li>
+                    <li>Durham, NC</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 Archtype. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = Math.random() * 0.3 + 's';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements that should fade in
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

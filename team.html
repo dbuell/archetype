@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Archtype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"></div>
+                Archtype
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#waitlist" class="cta-button">Join Waitlist</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 8rem 2rem 2rem;">
+        <div class="hero-container">
+            <h1 class="fade-in">Meet Our <span class="highlight">Team</span></h1>
+            <p class="fade-in" style="max-width: 800px;">The experts behind Archetype driving innovation in certification.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="features" style="background: var(--light-gray); padding: 4rem 2rem;">
+        <div class="features-container">
+            <div class="team-grid">
+                <!-- Mary Foerster -->
+                <div class="team-member fade-in">
+                    <div class="team-avatar">M</div>
+                    <h3>Mary Foerster</h3>
+                    <span class="team-role">CEO & Founder</span>
+                    <p class="team-bio">With over a decade of experience in the certification ecosystem, Mary brings a unique perspective to our mission. Her inquisitive nature helps her connect the dots in complex processes, guiding manufacturers through certification smoothly. Passionate about helping others, she thrives on simplifying the intricacies of certification. Her established relationships with both manufacturers and certification bodies strengthen our network and keep us at the forefront of industry standards.</p>
+                </div>
+
+                <!-- Dr. Tomer Libal -->
+                <div class="team-member fade-in">
+                    <div class="team-avatar">T</div>
+                    <h3>Dr. Tomer Libal</h3>
+                    <span class="team-role">CTO</span>
+                    <p class="team-bio">Dr. Tomer Libal brings over 24 years of AI expertise, with a focused interest in AI and Law since 2017. He served as a tenured professor of AI at the American University of Paris (2017–2024) and was a principal investigator on access-to-justice projects at the University of Luxembourg. Dr. Libal's practical knowledge of AI applications in legal and regulatory domains drives our technology strategy.</p>
+                </div>
+
+                <!-- Devin Buell -->
+                <div class="team-member fade-in">
+                    <div class="team-avatar">D</div>
+                    <h3>Devin Buell</h3>
+                    <span class="team-role">COO</span>
+                    <p class="team-bio">Devin has over 15 years of experience bringing new products to market, including building teams and processes from the ground up. He has led multiple development teams, managed sustained business operations, and built lasting partnerships. This experience positions Archetype to scale effectively—establishing the right team and processes to grow the business and hone our customer base.</p>
+                </div>
+
+                <!-- Steven Foerster -->
+                <div class="team-member fade-in">
+                    <div class="team-avatar">S</div>
+                    <h3>Steven Foerster</h3>
+                    <span class="team-role">VP of Engineering</span>
+                    <p class="team-bio">Steven brings over 28 years of experience building systems at the intersection of cybersecurity, automation, and AI. He specializes in taking hard problems in secure infrastructure and making them usable and resilient.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>hello@archtype.coach</li>
+                    <li></li>
+                    <li>Durham, NC</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 Archtype. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = Math.random() * 0.3 + 's';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements that should fade in
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
